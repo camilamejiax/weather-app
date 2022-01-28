@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <link rel="stylesheet" href="src/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/f454c68da3.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <form id="searchBar">
+            <input type="text" id="searchCity" placeholder="Search New City..." autocomplete="no">
+            <button id="submitNewCity" class="btn btn-outline-secondary">Search</button>
+          </form>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col">
+          <h1 id="newCity">Hillside, New Jersey</h1>
+        </div>
+      </div>
+
+       <div class="row current-location">
+        <div class="col">
+          <button class="btn btn-link" id="currentLocation"><i class="fas fa-map-marker-alt"></i>  Current Location</button>
+        </div>
+      </div>
+      
+
+      <div class="row temp-display">
+        <div class="col-6 icon">
+          <i class="fas fa-sun sun"></i>
+        </div>
+        <div class="col-6 temp-info">
+          <span class="temp" id="temperature">0</span>
+          <span class="units">°C</span>
+          <ul>
+            <li id="description">Sunny</li>
+            <li>Humidity: <span id="humidity"></span>%</li>
+            <li>Wind: <span id="wind"></span> km/h</li>
+          </ul>
+        </div>
+      </div>
+
+      
+
+      <div class="row days">
+        <div class="col">Today</div>
+        <div class="col">Tuesday</div>
+        <div class="col">Wednesday</div>
+        <div class="col">Thursday</div>
+        <div class="col">Friday</div>
+      </div>
+      <div class="row">
+        <div class="col">85° F</div>
+        <div class="col">90° F</div>
+        <div class="col">86° F</div>
+        <div class="col">87° F</div>
+        <div class="col">80° F</div>
+      </div>
+
+ 
+
+      <div class="row">
+        <div class="col-12">
+           <p id="time-display">...</p>
+        </div>
+      </div>
+     <script src="src/main.js"></script>
+    </body>
+</html>
